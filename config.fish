@@ -67,17 +67,3 @@ set -gx command_timeout 200
 if status is-interactive
 
 end
-
-function fish_prompt
-    set --local exit_code $status
-    echo ''
-    printf '%s%s %s@ %s%s' (set_color yellow) $USER (set_color grey) (set_color cyan) (prompt_pwd)
-    if test "$exit_code" != 0
-        set_color red
-        printf ' [%d]\n# ' $exit_code
-    else
-        echo ''
-        set_color green
-        echo '# '
-    end
-end
