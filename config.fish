@@ -15,6 +15,14 @@ alias ga="git add"
 alias gm="git merge"
 alias gc="git commit"
 
+if command -v git > /dev/null
+    alias rm="trash"
+end
+
+if command -v gat > /dev/null
+    alias cat="gat"
+end
+
 # Homebrew
 set -gx HOMEBREW_BREW_GIT_REMOTE https://mirrors.aliyun.com/homebrew/brew.git
 set -gx HOMEBREW_CORE_GIT_REMOTE https://mirrors.aliyun.com/homebrew/homebrew-core.git
@@ -57,11 +65,9 @@ set -gx OPENSSL_ROOT_DIR "$HOMEBREW_PREFIX/opt/openssl@1.1"
 set -gx OPENSSL_LIBS "-L$HOMEBREW_PREFIX/opt/openssl@1.1/lib"
 set -gx OPENSSL_CFLAGS "-I$HOMEBREW_PREFIX/opt/openssl@1.1/include"
 
-alias rm="trash"
-
 # starship
-set -gx STARSHIP_CONFIG $HOME/.config/starship/starship.toml
-set -gx command_timeout 200
+#set -gx STARSHIP_CONFIG $HOME/.config/starship/starship.toml
+#set -gx command_timeout 200
 #starship init fish | source
 
 if status is-interactive
