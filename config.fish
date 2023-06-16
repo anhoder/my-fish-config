@@ -32,6 +32,7 @@ if test -z "$HOMEBREW_PREFIX"
     # 默认/usr/local，需要变更，在init.fish中设置
     set -gx HOMEBREW_PREFIX "/usr/local"
 end 
+set -gx PATH "$HOME/.cargo/bin:$PATH"
 set -gx PATH "$HOMEBREW_PREFIX/bin:$PATH"
 alias ibrew="/usr/local/bin/brew"
 
