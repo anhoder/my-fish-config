@@ -66,9 +66,10 @@ set -gx OPENSSL_LIBS "-L$HOMEBREW_PREFIX/opt/openssl@1.1/lib"
 set -gx OPENSSL_CFLAGS "-I$HOMEBREW_PREFIX/opt/openssl@1.1/include"
 
 # starship
-#set -gx STARSHIP_CONFIG $HOME/.config/starship/starship.toml
-#set -gx command_timeout 200
-#starship init fish | source
+set -gx STARSHIP_CONFIG $HOME/.config/starship/starship.toml
+set -gx command_timeout 200
+set -gx STARSHIP_LOG error
+starship init fish | source
 
 if status is-interactive
 
