@@ -15,14 +15,6 @@ alias ga="git add"
 alias gm="git merge"
 alias gc="git commit"
 
-if command -v git > /dev/null
-    alias rm="trash"
-end
-
-if command -v gat > /dev/null
-    alias cat="gat"
-end
-
 # Homebrew
 set -gx HOMEBREW_BREW_GIT_REMOTE https://mirrors.aliyun.com/homebrew/brew.git
 set -gx HOMEBREW_CORE_GIT_REMOTE https://mirrors.aliyun.com/homebrew/homebrew-core.git
@@ -72,6 +64,11 @@ set -gx command_timeout 200
 set -gx STARSHIP_LOG error
 starship init fish | source
 
-if status is-interactive
-
+if command -v trash > /dev/null 2>&1
+    alias rm="trash"
 end
+
+if command -v bat > /dev/null 2>&1
+    alias cat="bat"
+end
+
