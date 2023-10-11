@@ -15,11 +15,8 @@ alias ga="git add"
 alias gm="git merge"
 alias gc="git commit"
 
-# VSCodium
-set -gx VSCODE_GALLERY_SERVICE_URL https://marketplace.visualstudio.com/_apis/public/gallery
-set -gx VSCODE_GALLERY_ITEM_URL https://marketplace.visualstudio.com/items
-set -gx VSCODE_GALLERY_CACHE_URL https://vscode.blob.core.windows.net/gallery/index
-set -gx VSCODE_GALLERY_CONTROL_URL ''
+# VSCode-Insider
+alias code="code-insiders"
 
 # Homebrew
 set -gx HOMEBREW_BREW_GIT_REMOTE https://mirrors.aliyun.com/homebrew/brew.git
