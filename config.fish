@@ -67,6 +67,10 @@ set -gx command_timeout 200
 set -gx STARSHIP_LOG error
 starship init fish | source
 
+if command -v nvim > /dev/null 2>&1
+    alias vim="nvim"
+end
+
 if command -v trash > /dev/null 2>&1
     alias rm="trash"
 end
