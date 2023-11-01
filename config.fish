@@ -4,7 +4,7 @@ end
 
 set fish_greeting Hello, anhoder!
 
-set -gx CLICOLOR 'Yes'
+set -gx CLICOLOR Yes
 set -gx LS_OPTIONS '--color=auto'
 
 # Git
@@ -25,8 +25,8 @@ set -gx HOMEBREW_BOTTLE_DOMAIN https://mirrors.aliyun.com/homebrew/homebrew-bott
 set -gx HOMEBREW_AUTO_UPDATE_SECS 86400
 if test -z "$HOMEBREW_PREFIX"
     # 默认/usr/local，需要变更，在init.fish中设置
-    set -gx HOMEBREW_PREFIX "/usr/local"
-end 
+    set -gx HOMEBREW_PREFIX /usr/local
+end
 set -gx PATH "$HOME/.cargo/bin:$PATH"
 set -gx PATH "$HOMEBREW_PREFIX/bin:$PATH"
 alias ibrew="/usr/local/bin/brew"
@@ -67,15 +67,26 @@ set -gx command_timeout 200
 set -gx STARSHIP_LOG error
 starship init fish | source
 
-if command -v nvim > /dev/null 2>&1
+# neovide
+set -gx NEOVIDE_FRAME full
+set -gx NEOVIDE_MAXIMIZED 1
+set -gx NEOVIDE_MULTIGRID 1
+set -gx NEOVIDE_IDLE 1
+set -gx NEOVIDE_SRGB 0
+set -gx NEOVIDE_VSYNC 1
+
+if command -v nvim >/dev/null 2>&1
     alias vim="nvim"
 end
 
-if command -v trash > /dev/null 2>&1
+if command -v neovide >/dev/null 2>&1
+    alias vd="neovide"
+end
+
+if command -v trash >/dev/null 2>&1
     alias rm="trash"
 end
 
-if command -v bat > /dev/null 2>&1
+if command -v bat >/dev/null 2>&1
     alias cat="bat"
 end
-
