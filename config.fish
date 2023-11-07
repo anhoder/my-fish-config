@@ -67,6 +67,8 @@ set -gx command_timeout 200
 set -gx STARSHIP_LOG error
 starship init fish | source
 
+set -gx EDITOR vim
+
 # neovide
 set -gx NEOVIDE_FRAME full
 set -gx NEOVIDE_MAXIMIZED 1
