@@ -68,6 +68,9 @@ set -gx STARSHIP_LOG error
 starship init fish | source
 
 set -gx EDITOR vim
+if command -v nvim >/dev/null 2>&1
+    set -gx EDITOR nvim
+end
 
 # neovide
 set -gx NEOVIDE_FRAME full
