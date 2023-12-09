@@ -18,6 +18,8 @@ alias gc="git commit"
 # VSCode-Insider
 alias code="code-insiders"
 
+set -gx TERM tmux-256color
+
 # Homebrew
 set -gx HOMEBREW_BREW_GIT_REMOTE https://mirrors.aliyun.com/homebrew/brew.git
 set -gx HOMEBREW_CORE_GIT_REMOTE https://mirrors.aliyun.com/homebrew/homebrew-core.git
@@ -48,10 +50,10 @@ set -gx LDFLAGS "$LDFLAGS -L$HOMEBREW_PREFIX/opt/openssl@1.1/lib -L$HOMEBREW_PRE
 set -gx LIBS "$LIBS -lssl -lcrypto"
 
 # CFLAGS
-set -gx CFLAGS "$CFLAGS -I$HOMEBREW_PREFIX/opt/openssl@1.1/include -I$HOMEBREW_PREFIX/opt/libiconv/include -I$HOMEBREW_PREFIX/opt/curl/include -I$HOMEBREW_PREFIX/include"
+set -gx CFLAGS "$CFLAGS -I$HOMEBREW_PREFIX/opt/openssl@1.1/include -I$HOMEBREW_PREFIX/opt/libiconv/include -I$HOMEBREW_PREFIX/opt/curl/include -I$HOMEBREW_PREFIX/opt/php/include -I$HOMEBREW_PREFIX/include"
 
 # CPPFLAGS
-set -gx CPPFLAGS "$CPPFLAGS -I$HOMEBREW_PREFIX/opt/openssl@1.1/include -I$HOMEBREW_PREFIX/opt/libiconv/include -I$HOMEBREW_PREFIX/opt/curl/include -I$HOMEBREW_PREFIX/include"
+set -gx CPPFLAGS "$CPPFLAGS -I$HOMEBREW_PREFIX/opt/openssl@1.1/include -I$HOMEBREW_PREFIX/opt/libiconv/include -I$HOMEBREW_PREFIX/opt/curl/include -I$HOMEBREW_PREFIX/opt/php/include -I$HOMEBREW_PREFIX/include"
 
 # PKG_COFNIG_PATH
 set -gx PKG_COFNIG_PATH "$HOMEBREW_PREFIX/opt/openssl@1.1/lib/pkgconfig:$HOMEBREW_PREFIX/opt/curl/lib/pkgconfig:$PKG_COFNIG_PATH"
@@ -92,6 +94,6 @@ if command -v trash >/dev/null 2>&1
     alias rm="trash"
 end
 
-if command -v bat >/dev/null 2>&1
-    alias cat="bat"
+if command -v kitten >/dev/null 2>&1
+    alias icat="kitten icat"
 end
