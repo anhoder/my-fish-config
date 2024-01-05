@@ -18,7 +18,7 @@ alias gc="git commit"
 # VSCode-Insider
 alias code="code-insiders"
 
-set -gx TERM tmux-256color
+# set -gx TERM tmux-256color
 
 # Homebrew
 set -gx HOMEBREW_BREW_GIT_REMOTE https://mirrors.aliyun.com/homebrew/brew.git
