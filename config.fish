@@ -6,6 +6,7 @@ set fish_greeting Hello, anhoder!
 
 set -gx CLICOLOR Yes
 set -gx LS_OPTIONS '--color=auto'
+set -gx XDG_CONFIG_HOME "$HOME/.config"
 
 # Git
 alias gp="git push"
